@@ -38,7 +38,6 @@ extension FlickrPhotosVC: UITextFieldDelegate {
                 self.collectionView?.reloadData()
             }
         }
-        
         textField.text = nil
         textField.resignFirstResponder()
         return true
