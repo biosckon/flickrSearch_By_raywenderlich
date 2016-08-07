@@ -88,7 +88,12 @@ class Flickr {
         searchTerm: String,
         completion : (results: FlickrSearchResults?, error : NSError?) -> Void){
         
-        let searchURL = flickrSearchURLForSearchTerm(searchTerm)
+        guard let searchURL = flickrSearchURLForSearchTerm(searchTerm) else {
+            print("search URL is nil")
+            completion(results: nil, error: nil)
+            return
+        }
+        
         let searchRequest = NSURLRequest(URL: searchURL)
         
         let task = NSURLSession
@@ -152,12 +157,18 @@ class Flickr {
         task.resume()
     }
     
-    private func flickrSearchURLForSearchTerm(searchTerm:String) -> NSURL {
+    private func flickrSearchURLForSearchTerm(searchTerm:String) -> NSURL? {
         
-        let escapedTerm = searchTerm.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())
-        let URLString = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=\(flickAPIKey)&text=\(escapedTerm)&per_page=20&format=json&nojsoncallback=1"
-        return NSURL(string: URLString)!
+        guard let escapedTerm = searchTerm
+            .stringByTrimmingCharactersInSet(
+                NSCharacterSet.whitespaceAndNewlineCharacterSet())
+            .stringByAddingPercentEncodingWithAllowedCharacters(
+                .URLHostAllowedCharacterSet()) else {
+                    return nil }
+            
+        let urlString = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=\(flickAPIKey)&text=\(escapedTerm)&per_page=20&format=json&nojsoncallback=1"
+        
+        let url = NSURL(string: urlString)
+        return url
     }
-    
-    
 }

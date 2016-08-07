@@ -14,7 +14,7 @@
 		CB04EBA61D573935002BCD69 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB04EBA51D573935002BCD69 /* Const.swift */; };
 		CB04EBA81D573E3A002BCD69 /* FlickrPhotosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB04EBA71D573E3A002BCD69 /* FlickrPhotosVC.swift */; };
 		CB04EBAA1D573FCE002BCD69 /* FlickrSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB04EBA91D573FCE002BCD69 /* FlickrSearcher.swift */; };
-		CB04EBAC1D574D6A002BCD69 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = CB04EBAB1D574D6A002BCD69 /* README.md */; };
+		CB04EBAE1D57673F002BCD69 /* FlickrPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB04EBAD1D57673F002BCD69 /* FlickrPhotoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +28,7 @@
 		CB04EBA71D573E3A002BCD69 /* FlickrPhotosVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrPhotosVC.swift; sourceTree = "<group>"; };
 		CB04EBA91D573FCE002BCD69 /* FlickrSearcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrSearcher.swift; sourceTree = "<group>"; };
 		CB04EBAB1D574D6A002BCD69 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CB04EBAD1D57673F002BCD69 /* FlickrPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrPhotoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				CB04EB971D573453002BCD69 /* Main.storyboard */,
+				CB04EBAD1D57673F002BCD69 /* FlickrPhotoCell.swift */,
 				CB04EBA71D573E3A002BCD69 /* FlickrPhotosVC.swift */,
 				CB04EBA51D573935002BCD69 /* Const.swift */,
 				CB04EBA91D573FCE002BCD69 /* FlickrSearcher.swift */,
@@ -147,9 +149,9 @@
 			files = (
 				CB04EB941D573453002BCD69 /* AppDelegate.swift in Sources */,
 				CB04EBA61D573935002BCD69 /* Const.swift in Sources */,
-				CB04EBAC1D574D6A002BCD69 /* README.md in Sources */,
 				CB04EBA81D573E3A002BCD69 /* FlickrPhotosVC.swift in Sources */,
 				CB04EBAA1D573FCE002BCD69 /* FlickrSearcher.swift in Sources */,
+				CB04EBAE1D57673F002BCD69 /* FlickrPhotoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
